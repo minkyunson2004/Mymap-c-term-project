@@ -457,7 +457,7 @@ void Mymap::remove_house(int x, int y)
     {
         if(x < 0 || x >= base.return_limit_x() || y < 0 || y >= base.return_limit_y()) throw 1;
         if(base(x, y) != HOUSE) throw 2;
-        base(x, y) = HOUSE;
+        base(x, y) = PLAIN;
     }
     catch (int Errortype)
     {
