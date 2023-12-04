@@ -6,6 +6,8 @@ int main(int argc, const char * argv[])
     cout << "지도의 가로 크기, 세로 크기를 입력하시오. 형식 : 가로 세로" << endl;
     int x, y;
     cin >> x >> y;
+    cin.clear();
+    while (cin.get() != '\n') continue;
     Mymap mymap(x, y);
     while (1)
     {
