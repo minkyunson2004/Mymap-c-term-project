@@ -94,7 +94,7 @@ void Mymap::print_navigator(int start_x, int start_y, int end_x, int end_y)
                             for(int k = 0; k < 4; k++)
                             {
                                 pair<int, int> next(now.first + dx[k], now.second + dy[k]);
-                                if(next.first < 0 || next.second < 0 || next.first > navigator_shortest_distance.return_limit_x() || next.second > navigator_shortest_distance.return_limit_y()) continue;
+                                if(next.first < 0 || next.second < 0 || next.first >= navigator_shortest_distance.return_limit_x() || next.second >= navigator_shortest_distance.return_limit_y()) continue;
                                 if(visit[next.first][next.second] == j + 1)
                                 {
                                     switch (k)
@@ -222,7 +222,7 @@ void Mymap::print_navigator(int start_x, int start_y, int end_x, int end_y)
                                 for(int k = 0; k < 4; k++)
                                 {
                                     pair<int, int> next(now.first + dx[k], now.second + dy[k]);
-                                    if(next.first < 0 || next.second < 0 || next.first > navigator_road_first.return_limit_x() || next.second > navigator_road_first.return_limit_y()) continue;
+                                    if(next.first < 0 || next.second < 0 || next.first >= navigator_road_first.return_limit_x() || next.second >= navigator_road_first.return_limit_y()) continue;
                                     if(visit[next.first][next.second] == j + 1)
                                     {
                                         switch (k)
@@ -347,7 +347,7 @@ void Mymap::print_navigator(int start_x, int start_y, int end_x, int end_y)
                                 for(int k = 0; k < 4; k++)
                                 {
                                     pair<int, int> next(now.first + dx[k], now.second + dy[k]);
-                                    if(next.first < 0 || next.second < 0 || next.first > navigator_road_first.return_limit_x() || next.second > navigator_road_first.return_limit_y()) continue;
+                                    if(next.first < 0 || next.second < 0 || next.first >= navigator_road_first.return_limit_x() || next.second >= navigator_road_first.return_limit_y()) continue;
                                     if(visit[next.first][next.second] == j + 1)
                                     {
                                         switch (k)
@@ -415,7 +415,10 @@ void Mymap::print_navigator(int start_x, int start_y, int end_x, int end_y)
             {
                 if(q.empty())
                 {
-                    break;
+                    if(road_start == road_end)
+                        break;
+                    else
+                        throw 3;
                 }
                 
                 pair<int,int> current_point = q.front();
@@ -470,7 +473,7 @@ void Mymap::print_navigator(int start_x, int start_y, int end_x, int end_y)
                             for(int k = 0; k < 4; k++)
                             {
                                 pair<int, int> next(now.first + dx[k], now.second + dy[k]);
-                                if(next.first < 0 || next.second < 0 || next.first > navigator_road_first.return_limit_x() || next.second > navigator_road_first.return_limit_y()) continue;
+                                if(next.first < 0 || next.second < 0 || next.first >= navigator_road_first.return_limit_x() || next.second >= navigator_road_first.return_limit_y()) continue;
                                 if(visit[next.first][next.second] == j + 1)
                                 {
                                     switch (k)
