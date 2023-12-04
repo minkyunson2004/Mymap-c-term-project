@@ -274,29 +274,28 @@ int main(int argc, const char * argv[])
         }
         else if (command == "command_list")
         {
-            cout << "void add_WEroad(int y, int x_start, int x_end, bool house_destroy = false) 동서방향 길추가" << endl;
-            cout << "void add_NSroad(int x, int y_start, int y_end, bool house_destroy = false); 남북방향 길추가" << endl;
-            cout << "void add_road(int x, int y, bool house_destroy = false); 길추가" << endl;
-            cout << "void remove_WEroad(int y, int x_start, int x_end); 동서방향 길삭제" << endl;
-            cout << "void remove_NSroad(int x, int y_srart, int y_end); 남북방향 길삭제" << endl;
-            cout << "void remove_road(int x, int y); 길삭제" << endl;
-            cout << "void remove_road_area(int x_start, int y_start, int x_end, int y_end); 영역안의 도로 모두 삭제" << endl;
-            cout << "bool add_house(int x, int y, bool ignore_road = false); 집추가" << endl;
-            cout << "void remove_house(int x, int y); 집제거" << endl;
-            cout << "void remove_house_area(int x_start, int y_start, int x_end, int y_end); 영역안의 집모두 제거" << endl;
-            cout << "void remove_all_initialrize(); 지도를 초기화" << endl;
-            cout << "void register_place(string place_name, int x, int y); 특정 좌표에 장소명 부여" << endl;
-            cout << "void remove_place(string place_name); 부여된 장소명 삭제" << endl;
-            cout << "void remove_place(int x, int y); 해당좌표에 부여된 장소명 삭제" << endl;
-            cout << "void register_place_and_building(string place_name, int x, int y); 이름이 부여된 건물 생성" << endl;
-            cout << "void remove_place_and_building(string place_name); 이름이 부여된 건물 삭제" << endl;
-            cout << "void remove_place_and_building(int x, int y); 해당좌표에 이름이 부여된 건물 삭제" << endl;
-            cout << "void register_place_print(); 현재 장소명 전부 나열" << endl;
-            
-            cout << "\n\ncommand_list 명령어 목록 출력" << endl;
+            cout << "add_weroad 동서방향 길추가" << endl;
+            cout << "add_nsroad 남북방향 길추가" << endl;
+            cout << "add_road 길추가" << endl;
+            cout << "remove_weroad 동서방향 길삭제" << endl;
+            cout << "remove_nsroad 남북방향 길삭제" << endl;
+            cout << "remove_road 길삭제" << endl;
+            cout << "remove_road_area 영역안의 도로 모두 삭제" << endl;
+            cout << "add_house 집추가" << endl;
+            cout << "remove_house 집제거" << endl;
+            cout << "remove_house_area 영역안의 집모두 제거" << endl;
+            cout << "remove_all_initialrize 지도를 초기화" << endl;
+            cout << "register_place 특정 좌표에 장소명 부여" << endl;
+            cout << "remove_place 부여된 장소명 삭제" << endl;
+            cout << "remove_place 해당좌표에 부여된 장소명 삭제" << endl;
+            cout << "register_place_and_building 이름이 부여된 건물 생성" << endl;
+            cout << "remove_place_and_building 이름이 부여된 건물 삭제" << endl;
+            cout << "remove_place_and_building 해당좌표에 이름이 부여된 건물 삭제" << endl;
+            cout << "register_place_print 현재 장소명 전부 나열" << endl;
+            cout << "command_list 명령어 목록 출력" << endl;
             cout << "navigator 좌표에 따른 네비게이션 기능제공" << endl;
             cout << "exit 프로그램 종료" << endl;
-            cout << "\n\n명령어 리스트의 함수명을 소문자로 입력 이후 출력되는 지시에 따라 입력" << endl;
+            cout << "\n\n명령어 리스트의 함수명을 입력후 출력되는 지시에 따라 입력" << endl;
             cin.clear();
             while (cin.get() != '\n') continue;
         }
