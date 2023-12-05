@@ -1,6 +1,7 @@
 #include "MapImage.h"
 #include "Saveplace.h"
 #include <queue>
+#include <algorithm>
 using namespace std;
 class Mymap
 {
