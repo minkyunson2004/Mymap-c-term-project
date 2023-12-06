@@ -1,7 +1,15 @@
+//
+//  Mymap.h
+//  term project
+//
+//  Created by 손민균 on 12/3/23.
+//
+
+#ifndef Mymap_h
+#define Mymap_h
 #include "MapImage.h"
 #include "Saveplace.h"
 #include <queue>
-#include <algorithm>
 using namespace std;
 class Mymap
 {
