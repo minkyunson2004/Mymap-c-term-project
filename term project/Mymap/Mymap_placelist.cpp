@@ -42,8 +42,10 @@ void Mymap::register_place_and_building(string place_name, int x, int y)
                 break;
             case 2:
                 cout << "이미 사용중인 이름입니다. 다른 이름을 사용하세요." << endl;
+                break;
             case 3:
                 cout << "이 장소는 이름이 이미 등록되어 있습니다. remove_place를 사용한 후 다시 입려해주세요." << endl;
+                break;
             default:
                 break;
         }
