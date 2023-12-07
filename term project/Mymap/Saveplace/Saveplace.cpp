@@ -44,7 +44,7 @@ void Saveplace::place_delete(string delete_place_name)
     } 
     catch (int Errortype)
     {
-        ;
+        cout << "해당 명칭의 장소가 없습니다." << endl;
     }
 }
 void Saveplace::place_delete(int delete_place_xpos, int delete_place_ypos)
@@ -59,7 +59,7 @@ void Saveplace::place_delete(int delete_place_xpos, int delete_place_ypos)
     }
     catch (int Errortype)
     {
-        ;
+        cout << "해당 좌표는 명칭이 등록되어있지 않습니다." << endl;
     }
 }
 pair<int, int> Saveplace::return_pos(const string & name)
